@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nyakoe Retail Centre | Shop & Posho Mill</title>
+  <!-- Tailwind CSS v3 + Font Awesome 6 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* custom animations & smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    .hover-grow {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hover-grow:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.2);
+    }
+    .hero-pattern {
+      background-image: radial-gradient(circle at 10% 30%, rgba(255,215,140,0.15) 2%, transparent 2.5%),
+                        radial-gradient(circle at 85% 70%, rgba(255,215,140,0.1) 1.8%, transparent 2%);
+      background-size: 48px 48px, 36px 36px;
+    }
+    .btn-primary {
+      transition: all 0.2s ease;
+    }
+    .btn-primary:active {
+      transform: scale(0.97);
+    }
+    .mill-badge {
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    }
+    @media (max-width: 640px) {
+      .container-custom {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased scroll-smooth">
+
+  <!-- ======================== HEADER / NAVIGATION ======================== -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md border-b border-gray-200">
+    <div class="container mx-auto px-5 lg:px-8 py-3 flex flex-wrap items-center justify-between">
+      <!-- Logo + Brand -->
+      <div class="flex items-center space-x-2">
+        <div class="bg-amber-600 rounded-xl w-9 h-9 flex items-center justify-center shadow-md">
+          <i class="fas fa-store text-white text-xl"></i>
+        </div>
+        <span class="font-bold text-xl tracking-tight text-gray-800">Nyakoe <span class="text-amber-600">Retail</span></span>
+        <span class="hidden md:inline-block ml-2 text-xs font-medium bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">Since 2005</span>
+      </div>
+      
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-7 text-gray-700 font-medium">
+        <a href="#home" class="hover:text-amber-600 transition">Home</a>
+        <a href="#shop" class="hover:text-amber-600 transition">General Shop</a>
+        <a href="#posho-mill" class="hover:text-amber-600 transition">Posho Mill</a>
+        <a href="#testimonials" class="hover:text-amber-600 transition">Community</a>
+        <a href="#contact" class="hover:text-amber-600 transition">Visit Us</a>
+      </nav>
+      
+      <!-- CTA / contact quick -->
+      <div class="hidden md:flex items-center space-x-3">
+        <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md transition-all btn-primary">
+          <i class="fas fa-phone-alt mr-1"></i> Contact
+        </a>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Drawer (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 py-3 px-5 shadow-lg">
+      <nav class="flex flex-col space-y-3 text-gray-700 font-medium">
+        <a href="#home" class="hover:text-amber-600 py-1 transition"><i class="fas fa-home mr-2 w-5"></i>Home</a>
+        <a href="#shop" class="hover:text-amber-600 py-1 transition"><i class="fas fa-shopping-basket mr-2 w-5"></i>General Shop</a>
+        <a href="#posho-mill" class="hover:text-amber-600 py-1 transition"><i class="fas fa-tractor mr-2 w-5"></i>Posho Mill</a>
+        <a href="#testimonials" class="hover:text-amber-600 py-1 transition"><i class="fas fa-star mr-2 w-5"></i>Community</a>
+        <a href="#contact" class="hover:text-amber-600 py-1 transition"><i class="fas fa-map-marker-alt mr-2 w-5"></i>Visit Us</a>
+        <div class="pt-2">
+          <a href="#contact" class="inline-block bg-amber-600 text-white px-4 py-2 rounded-full text-center w-full">Make Inquiry</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================== HERO SECTION ======================== -->
+    <section id="home" class="relative bg-gradient-to-br from-amber-50 via-white to-gray-100 overflow-hidden hero-pattern">
+      <div class="container mx-auto px-5 lg:px-8 py-16 md:py-24 flex flex-col-reverse lg:flex-row items-center gap-12">
+        <div class="flex-1 text-center lg:text-left">
+          <span class="text-amber-600 font-semibold text-lg tracking-wide"><i class="fas fa-grain"></i> One-stop community hub</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-800 mt-3">
+            Shop & <span class="text-amber-600">Posho Mill</span><br>
+            Under One Roof
+          </h1>
+          <p class="text-gray-600 text-lg mt-5 max-w-xl mx-auto lg:mx-0">
+            From fresh groceries and daily essentials to premium maize milling – Nyakoe Retail Centre serves your family and farm needs with trust, speed, and care.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start">
+            <a href="#shop" class="bg-amber-600 hover:bg-amber-700 text-white px-7 py-3 rounded-full font-semibold shadow-lg flex items-center gap-2 transition btn-primary">
+              <i class="fas fa-store"></i> Explore Shop
+            </a>
+            <a href="#posho-mill" class="bg-white border-2 border-amber-600 text-amber-700 hover:bg-amber-50 px-7 py-3 rounded-full font-semibold flex items-center gap-2 transition">
+              <i class="fas fa-industry"></i> Milling Services
+            </a>
+          </div>
+          <!-- quick stats -->
+          <div class="grid grid-cols-3 gap-4 max-w-md mt-12 pt-4 border-t border-gray-200 mx-auto lg:mx-0">
+            <div><p class="text-2xl font-black text-gray-800">24/7</p><p class="text-xs text-gray-500">Shop Access</p></div>
+            <div><p class="text-2xl font-black text-gray-800">2Hr</p><p class="text-xs text-gray-500">Milling Wait</p></div>
+            <div><p class="text-2xl font-black text-gray-800">1K+</p><p class="text-xs text-gray-500">Happy Families</p></div>
+          </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+          <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-amber-200/30 flex items-center justify-center shadow-2xl">
+            <img src="https://placehold.co/600x400/FFF7E8/BD7A1A?text=Maize+%26+Goods&font=montserrat" alt="Retail and Posho Mill Concept" class="rounded-2xl object-cover w-full h-full max-w-xs md:max-w-md shadow-xl border-4 border-white">
+            <div class="absolute -bottom-4 -right-4 bg-white rounded-full p-2 shadow-lg">
+              <i class="fas fa-grin-tongue-squint text-3xl text-amber-600"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== SHOP SECTION ======================== -->
+    <section id="shop" class="py-20 bg-white">
+      <div class="container mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider"><i class="fas fa-tags mr-1"></i> Everyday needs</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">General Retail Shop</h2>
+          <div class="w-24 h-1 bg-amber-500 mx-auto mt-3 rounded-full"></div>
+          <p class="text-gray-500 mt-4">Fresh produce, household items, beverages, snacks, and farm essentials — all at fair prices.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- product card 1 -->
+          <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden hover-grow transition-all border border-gray-100">
+            <div class="h-44 bg-gradient-to-r from-blue-100 to-indigo-50 flex items-center justify-center">
+              <i class="fas fa-apple-alt text-6xl text-blue-700"></i>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start">
+                <h3 class="font-bold text-xl text-gray-800">Fresh Groceries</h3>
+                <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">organic</span>
+              </div>
+              <p class="text-gray-500 text-sm mt-2">Seasonal vegetables, fruits, dairy & eggs — restocked daily from local farms.</p>
+              <div class="mt-4 flex justify-between items-center">
+                <span class="text-amber-600 font-bold">Always fresh</span>
+                <i class="fas fa-shopping-cart text-gray-400"></i>
+              </div>
+            </div>
+          </div>
+          <!-- product card 2 -->
+          <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden hover-grow">
+            <div class="h-44 bg-gradient-to-r from-amber-100 to-yellow-50 flex items-center justify-center">
+              <i class="fas fa-utensils text-6xl text-amber-700"></i>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-xl text-gray-800">Pantry Staples</h3>
+              <p class="text-gray-500 text-sm mt-2">Rice, cooking oil, flour, sugar, spices and maize meal. Bulk purchases available.</p>
+              <div class="mt-4 flex justify-between items-center">
+                <span class="text-amber-600 font-bold">Best prices</span>
+                <i class="fas fa-tag text-gray-400"></i>
+              </div>
+            </div>
+          </div>
+          <!-- product card 3 -->
+          <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden hover-grow">
+            <div class="h-44 bg-gradient-to-r from-green-100 to-emerald-50 flex items-center justify-center">
+              <i class="fas fa-tools text-6xl text-green-700"></i>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-xl text-gray-800">Hardware & Farm</h3>
+              <p class="text-gray-500 text-sm mt-2">Ropes, tools, animal feeds, seeds, and basic hardware for the homestead.</p>
+              <div class="mt-4 flex justify-between items-center">
+                <span class="text-amber-600 font-bold">Available </span>
+                <i class="fas fa-hard-hat text-gray-400"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="#contact" class="inline-flex items-center gap-2 text-amber-600 font-semibold border-b-2 border-amber-300 hover:border-amber-600">Visit our shop counter <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== POSHO MILL SECTION ======================== -->
+    <section id="posho-mill" class="py-20 bg-gradient-to-br from-gray-50 to-orange-50/40">
+      <div class="container mx-auto px-5 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+          <div class="flex-1 order-2 lg:order-1">
+            <div class="relative">
+              <div class="absolute -top-5 -left-5 w-20 h-20 mill-badge rounded-full flex items-center justify-center shadow-lg">
+                <i class="fas fa-grain fa-2x text-white"></i>
+              </div>
+              <div class="bg-white rounded-3xl shadow-xl p-6 md:p-8 border-l-8 border-amber-500">
+                <span class="text-amber-600 font-bold text-sm uppercase tracking-wider"><i class="fas fa-cogs"></i> MODERN MILLING</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Posho Mill Services</h2>
+                <p class="text-gray-600 mt-4 text-lg">We mill maize, sorghum, and other cereals to perfection. High-capacity hammer mill with precision sifting – get your flour the same day.</p>
+                <ul class="mt-6 space-y-3">
+                  <li class="flex items-start gap-3"><i class="fas fa-check-circle text-amber-600 mt-1"></i><span><strong class="text-gray-800">Same-day milling</strong> — no overnight delays, maximum freshness.</span></li>
+                  <li class="flex items-start gap-3"><i class="fas fa-weight-hanging text-amber-600 mt-1"></i><span><strong class="text-gray-800">Custom fineness</strong> from coarse grits to super fine flour.</span></li>
+                  <li class="flex items-start gap-3"><i class="fas fa-hand-holding-usd text-amber-600 mt-1"></i><span><strong class="text-gray-800">Affordable rates</strong> per 90kg bag or small portions.</span></li>
+                  <li class="flex items-start gap-3"><i class="fas fa-tachometer-alt text-amber-600 mt-1"></i><span><strong class="text-gray-800">Fast turnaround</strong> — average 2 hrs for milling.</span></li>
+                </ul>
+                <div class="mt-8 flex flex-wrap gap-4">
+                  <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2.5 rounded-full font-semibold shadow-md transition">Request Milling Slot</a>
+                  <a href="#" class="border border-amber-600 text-amber-700 hover:bg-amber-50 px-6 py-2.5 rounded-full flex items-center gap-2"><i class="fas fa-file-invoice-dollar"></i> Price List</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 order-1 lg:order-2">
+            <div class="bg-white p-3 rounded-2xl shadow-2xl">
+              <img src="https://placehold.co/600x500/E6BC7F/462A12?text=Modern+Posho+Mill&font=montserrat" alt="Posho mill machine" class="rounded-xl w-full object-cover">
+              <div class="flex justify-around mt-5 text-center text-sm font-medium text-gray-700">
+                <div><i class="fas fa-microchip text-amber-600"></i> 20HP Motor</div>
+                <div><i class="fas fa-hourglass-half text-amber-600"></i> 500kg/hr</div>
+                <div><i class="fas fa-broom text-amber-600"></i> Dust-free system</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- additional quality bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 bg-amber-50 p-6 rounded-2xl">
+          <div class="text-center"><i class="fas fa-check-circle text-amber-700 text-2xl"></i><p class="font-semibold mt-1">Grade 1 Flour</p></div>
+          <div class="text-center"><i class="fas fa-truck-fast text-amber-700 text-2xl"></i><p class="font-semibold mt-1">Loading Bay</p></div>
+          <div class="text-center"><i class="fas fa-hand-sparkles text-amber-700 text-2xl"></i><p class="font-semibold mt-1">Hygienic Handling</p></div>
+          <div class="text-center"><i class="fas fa-wheat-awn text-amber-700 text-2xl"></i><p class="font-semibold mt-1">Local Maize Sourcing</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== TESTIMONIALS (COMMUNITY) ======================== -->
+    <section id="testimonials" class="py-20 bg-white">
+      <div class="container mx-auto px-5 lg:px-8">
+        <div class="text-center mb-12">
+          <i class="fas fa-comments text-amber-500 text-3xl"></i>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">What Our Community Says</h2>
+          <p class="text-gray-500 max-w-xl mx-auto">From daily shopping to bulk milling, we’ve earned the trust of local families in Nyakoe Ward, Rioma Village.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 - Sokoro -->
+          <div class="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+            <div class="flex items-center gap-3"><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i></div>
+            <p class="mt-3 text-gray-700 italic">“Nyakoe Retail Centre is a blessing to our village. I get fresh maize flour within hours and the shop has everything my family needs. No more long trips to town.”</p>
+            <div class="flex items-center gap-3 mt-4"><div class="w-10 h-10 rounded-full bg-amber-200 flex items-center justify-center"><i class="fas fa-user text-amber-700"></i></div><div><strong>Sokoro</strong><p class="text-xs text-gray-500">Local Farmer, Rioma</p></div></div>
+          </div>
+          <!-- Testimonial 2 - Nyangau -->
+          <div class="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+            <div class="flex items-center gap-3"><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i></div>
+            <p class="mt-3 text-gray-700 italic">“I recommend their posho mill to everyone. The service is fast, the staff is friendly, and the prices are affordable. Best retail hub in Nyakoe Ward!”</p>
+            <div class="flex items-center gap-3 mt-4"><div class="w-10 h-10 rounded-full bg-blue-200 flex items-center justify-center"><i class="fas fa-user-tie text-blue-700"></i></div><div><strong>Nyangau</strong><p class="text-xs text-gray-500">Small Business Owner</p></div></div>
+          </div>
+          <!-- Testimonial 3 - Ondieki -->
+          <div class="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+            <div class="flex items-center gap-3"><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star-half-alt text-yellow-400"></i></div>
+            <p class="mt-3 text-gray-700 italic">“The shop is well-stocked with fresh groceries and hardware items. The posho mill saves us time and money. Nyakoe Retail is truly community-focused.”</p>
+            <div class="flex items-center gap-3 mt-4"><div class="w-10 h-10 rounded-full bg-green-200 flex items-center justify-center"><i class="fas fa-female text-green-700"></i></div><div><strong>Ondieki</strong><p class="text-xs text-gray-500">Regular Customer</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== CONTACT & VISIT SECTION ======================== -->
+    <section id="contact" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-5 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-3xl shadow-xl overflow-hidden">
+          <div class="flex-1 p-8 lg:p-10">
+            <span class="text-amber-600 uppercase tracking-wide text-sm font-bold">Get in touch</span>
+            <h3 class="text-3xl font-bold text-gray-800 mt-2">Visit Nyakoe Retail Centre</h3>
+            <div class="mt-6 space-y-5">
+              <div class="flex gap-4 items-start"><i class="fas fa-map-marker-alt text-amber-600 text-xl mt-1"></i><div><h4 class="font-semibold">Location</h4><p class="text-gray-600">Nyakoe Ward, Rioma Village, along Kisii-Kilgoris Road, Kenya.</p></div></div>
+              <div class="flex gap-4 items-start"><i class="fas fa-clock text-amber-600 text-xl mt-1"></i><div><h4 class="font-semibold">Hours</h4><p class="text-gray-600">Shop: 7:00 AM – 9:00 PM (Mon-Sun) | Posho Mill: 8:00 AM – 6:00 PM (Mon-Sat)</p></div></div>
+              <div class="flex gap-4 items-start"><i class="fas fa-phone-alt text-amber-600 text-xl mt-1"></i><div><h4 class="font-semibold">Call / WhatsApp</h4><p class="text-gray-600">+254 724 855 737</p></div></div>
+              <div class="flex gap-4 items-start"><i class="fas fa-envelope text-amber-600 text-xl mt-1"></i><div><h4 class="font-semibold">Email</h4><p class="text-gray-600">zebedee45nyangau@gmail.com</p></div></div>
+            </div>
+            <div class="flex gap-4 mt-8">
+              <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-800 p-3 rounded-full w-12 h-12 flex items-center justify-center"><i class="fab fa-facebook-f text-xl"></i></a>
+              <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-800 p-3 rounded-full w-12 h-12 flex items-center justify-center"><i class="fab fa-whatsapp text-xl"></i></a>
+              <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-800 p-3 rounded-full w-12 h-12 flex items-center justify-center"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+          </div>
+          <div class="flex-1 bg-gradient-to-br from-amber-50 to-white p-8 lg:p-10">
+            <form action="#" method="post" class="space-y-5">
+              <div><label class="block text-gray-700 font-medium">Full name</label><input type="text" placeholder="Your name" class="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-400 focus:outline-none"></div>
+              <div><label class="block text-gray-700 font-medium">Phone / Email</label><input type="text" placeholder="Contact for milling or shopping inquiry" class="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-400"></div>
+              <div><label class="block text-gray-700 font-medium">Service interest</label><select class="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl bg-white"><option>General Shop - Product availability</option><option>Posho Mill - Maize milling</option><option>Bulk purchase inquiry</option></select></div>
+              <div><label class="block text-gray-700 font-medium">Message</label><textarea rows="3" placeholder="Ask about milling rates or grocery list..." class="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl"></textarea></div>
+              <button type="button" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 rounded-xl transition shadow-md btn-primary"><i class="fas fa-paper-plane"></i> Send inquiry</button>
+              <p class="text-xs text-center text-gray-400">We reply within 2 hours during business days</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="bg-gray-900 text-gray-300 py-10 border-t border-gray-800">
+    <div class="container mx-auto px-5 lg:px-8 text-center">
+      <div class="flex flex-wrap justify-center gap-6 mb-6">
+        <a href="#home" class="hover:text-amber-400 transition">Home</a>
+        <a href="#shop" class="hover:text-amber-400 transition">Shop</a>
+        <a href="#posho-mill" class="hover:text-amber-400 transition">Posho Mill</a>
+        <a href="#testimonials" class="hover:text-amber-400 transition">Reviews</a>
+      </div>
+      <div class="flex justify-center space-x-5 mb-5">
+        <i class="fab fa-cc-visa text-2xl text-gray-500"></i>
+        <i class="fab fa-cc-mastercard text-2xl text-gray-500"></i>
+        <i class="fas fa-money-bill-wave text-2xl text-gray-500"></i>
+      </div>
+      <p class="text-sm">© 2025 Nyakoe Retail Centre — Quality shop & modern posho mill services. Serving Nyakoe Ward, Rioma Village & beyond.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu toggle script -->
+  <script>
+    (function() {
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          const icon = menuBtn.querySelector('i');
+          if (mobileMenu.classList.contains('hidden')) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          }
+        });
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
